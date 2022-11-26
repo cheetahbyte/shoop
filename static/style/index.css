@@ -1,0 +1,267 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --dark-brand: #276367;
+    --main-brand: #2a9d8f;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: fit-content;
+}
+
+h1.title {
+    color: #264653;
+}
+
+svg.logo {
+    stroke: var(--main-brand);
+    margin-right: 20px;
+}
+
+.input {
+    position: relative;
+    height: 100%;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input input {
+    width: 30vw;
+    height: 40%;
+    border-radius: 5px;
+    border: 1px solid #b7b7a4;
+    font-size: .9rem;
+    padding: 3px;
+    padding-left: 1vw;
+}
+
+.input svg {
+    position: absolute;
+    right: 1vw;
+    stroke: var(--main-brand);
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls svg {
+    margin: 10px;
+    stroke:rgb(38, 70, 83);
+}
+
+.controls .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.controls .cart .badge {
+    background-color: var(--main-brand);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    right: 7px;
+    top: 7px;
+}
+
+/*
+spotlight
+*/
+
+section {
+    margin-bottom: 5vh;
+}
+
+section div.t {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    width: 20vw;
+    color:rgb(38, 70, 83);
+}
+
+section h2 {
+    width: fit-content;
+}
+
+section div.t svg{
+    stroke: var(--dark-brand);
+    margin-right: 1vw;
+}
+
+section.spotlight #sp-img {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    height: 65vh;
+    width: 70vw;
+    border-radius: 3px;
+    background-size: cover;
+    transition: background-image 0.2s ease-in-out;
+    background-position: center center;
+    background-image: url("https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80");
+}
+
+section.spotlight .pt {
+    background-color: white;
+    position: absolute;
+    right: 2vw;
+    bottom: 2vw;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 10px 20px 10px;
+    border-radius: 7px; 
+}
+
+section.spotlight .pt * {
+    margin: 0;
+}
+
+.spotlight .pt .p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: calc(100% - 20px);
+}
+
+.spotlight .pt button {
+    background-color: var(--dark-brand);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 7px 10px 7px 10px;
+    border-radius: 7px;
+    width: 60%;
+}
+
+.spotlight .pt p {
+    color: var(--dark-brand);
+}
+.spotlight .pt h3 {
+    height: fit-content;
+    width: fit-content;
+}
+
+.spotlight .pt span {
+    text-decoration: line-through;
+}
+
+.spotlight .pt .open {
+    position: absolute;
+    stroke: white;
+    background-color: var(--dark-brand);
+    padding: 5px 5px 5px 6px;
+    border-radius: 4px;
+    width: 20px;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+}
+
+/*
+trending
+*/
+
+.categories .card-container {
+    width: 70vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.categories .card {
+    height: 20vh;
+    width: 15vw;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.categories .card .overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    stroke: white;
+
+}
+
+.categories .card:hover .overlay {
+    display: flex;
+    
+}
+.categories .card .overlay h4, .categores .card .overlay svg {
+    margin: 0;
+}
+
+
+.categories .card:nth-child(1) {
+    background-image: url("/static/images/cats/tshirt.jpg")
+}
+
+.categories .card:nth-child(2) {
+    background-image: url("/static/images/cats/pants.jpg")
+}
+
+.categories .card:nth-child(3) {
+    background-image: url("/static/images/cats/shoes.jpg")
+}
+
+.categories .card:nth-child(4) {
+    background-image: url("/static/images/cats/reduced.jpg")
+}
+
+
+
+/*
+footer
+*/

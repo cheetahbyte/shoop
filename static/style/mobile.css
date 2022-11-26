@@ -1,0 +1,57 @@
+@media screen and (max-width: 800px) {
+    header {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 90%;
+    }
+
+    .input {
+        display: none;
+    }
+
+    .controls {
+        width: fit-content;
+        margin: 5px;
+    }
+
+    section .t {
+        width: 80% !important;
+    }
+
+    section .t svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    .spotlight #sp-img {
+        width: 80vw !important;
+        background-size: contain;
+    }
+
+
+    .spotlight #sp-img .pt {
+        width: 50%;
+        height: 15%;
+    }
+
+    .categories .card-container {
+        width: 80vw;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 10px;
+        grid-template-areas: 
+            ". ."
+            ". ."
+        ;
+    }
+
+    .categories .card-container .card {
+        width: 40vw;
+    }
+
+    .categories .card-container .card .overlay {
+        display: flex;
+    }
+}
