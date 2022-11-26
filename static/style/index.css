@@ -78,7 +78,9 @@ svg.logo {
     margin: 10px;
     stroke:rgb(38, 70, 83);
 }
-
+.controls #menu {
+    display: none;
+}
 .controls .cart {
     display: flex;
     align-items: center;
@@ -245,19 +247,19 @@ trending
 
 
 .categories .card:nth-child(1) {
-    background-image: url("static/images/cats/tshirt.jpg")
+    background-image: url("../images/cats/tshirt.jpg")
 }
 
 .categories .card:nth-child(2) {
-    background-image: url("static/images/cats/pants.jpg")
+    background-image: url("../images/cats/pants.jpg")
 }
 
 .categories .card:nth-child(3) {
-    background-image: url("static/images/cats/shoes.jpg")
+    background-image: url("../images/cats/shoes.jpg")
 }
 
 .categories .card:nth-child(4) {
-    background-image: url("static/images/cats/reduced.jpg")
+    background-image: url("../images/cats/reduced.jpg")
 }
 
 
